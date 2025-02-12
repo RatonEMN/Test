@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Fundamentos de JavaScript</title>
+  </head>
+
+  <body>
+    <h1>Fundamentos de JavaScript</h1>
+
+    <p id="demo"></p>
+
+    <script>
+      /* ------------------------------Comment-------------------------------------
+      var name = "placido";
+            let nombre = "Placido Domingues";
+            //console.log(name);
+            //console.log(nombre);
+
+            //Ambito de bloque
+
+            console.log("****************var***********");
+            var musica = "Rock";
+            console.log("Variable música antes del bloque: ",musica);
+            {
+                var musica = "pop";
+                console.log("Variable musica dentro del bloque",musica);
+            }
+            
+            console.log("Variable música antes del bloque: ",musica);
+
+            console.log("****************let***********");
+            let musica2 = "Rock";
+            console.log("Variable música antes del bloque: ",musica2);
+            {
+                let musica2= "pop";
+                console.log("Variable musica dentro del bloque",musica2);
+            }
+            
+            console.log("Variable música antes del bloque: ",musica2);
+            -------------------------End Comment----------------------------------*/ 
+      
+         
+              
+      /*------------------------------Comment-------------------------------
+      let a;
+      const PI = 3.1416;
+      console.log(PI);
+      //const NUEVE:
+
+      a = "kenai";
+
+      console.log(a);
+
+      const objeto = {
+        nombre: "Puerco",
+        edad: 95,
+      };
+
+      const colore = ["rojo", "verde", "azul"];
+
+      console.log(objeto);
+      console.log(colore);
+
+      objeto.correo = "puercopotter@correo.com";
+      colore.shift("rojo");
+
+      console.log(objeto);
+      console.log(colore);
+
+      const fruits = ["Banana", "Orange", "Apple", "Mango"];
+
+      console.log(fruits);
+
+      document.getElementById("demo").innerHTML = fruits.shift();
+
+      //-----------------------------Tema 5 Cadenas de texto-----------------
+      // AKA Strings
+
+      let nombre = "Emanuel";
+      let apellido = "martinez";
+
+      //Este es un ejemplo de una declaracion formal con el objeto String:
+      let saludo = new String("Olis Xaryolizz");
+      let loremp =
+        "            is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.        ";
+
+      console.log(nombre, apellido, saludo);
+
+      console.log(
+        nombre.length, //Length; regresa el numero de caracteres de la cadena de texto
+        apellido.length,
+        saludo.length,
+        nombre.toUpperCase(), //Convierte el texto a Mayusculas
+        apellido.toUpperCase(),
+        loremp.includes("like"), //El metodo include busca el texto que le indiques y regresa un true or false si lo encuentra
+        loremp,
+        loremp.trim(), //Elimina los espacios al inicio y al final del texto
+        loremp.split(" ") // Separa el texto y lo convierte en un array de acuerdo al separador que le indiques
+      );
+
+      //Problema para leer un texto de derecha a izquierda (alreves)
+      function revertir(texto) {
+        return texto.split("").reverse().join();
+      }
+
+      console.log(revertir("Puerco"));
+
+      -------------------------------------End Comment--------------------------------*/
+
+      //Atajos para programar mas facil:
+      //Alt + Z ----> para ver un texto de un parrafo con saltos de linea en vez de una sola linea
+      //Shift + Alt + F --------------> Para odenar el codigo
+
+      
+
+      /*---------------------------------------------- Inicia comentario
+
+      //-----------------------------------------------------Tema 6 Template String ------------------------------
+
+      let mi_nombre = "Emanuel";
+      let mi_apellido = "Martinez";
+      //Concatenacion ejemplo basico
+
+      let mi_saludo = "Hola mi nombre es: "+mi_nombre+" "+mi_apellido+".";
+      console.log(mi_saludo);
+
+      //Interpolacion; la interpolacion es una tecnica para agregar nuevos datos de un rango, en este caso combinar variables en una cadena de texo
+      //Interpolacion usando un TEMPLATE STRING= Una template string es una caracteristica de las cadenas de texto, Ejemlos: 
+
+      let mi_saludo2 = `Hola mi nombre es ${mi_nombre} ${mi_apellido}.`;
+      console.log(mi_saludo2);
+
+      //Ejemplo para imprimir codigo html en el console
+
+      let ul = "<ul><li>primavera</li><li>Verano</li><li>Otoño</li><li>Invierno</li></ul>";
+      
+      console.log(ul);
+      
+      //Codigo de forma INDENTADO
+      let ul2 = `
+        <ul>
+          <li>primavera</li>
+          <li>Verano</li>
+          <li>Otoño</li>
+          <li>Invierno</li>
+        </ul>";
+        `;
+
+        console.log(ul2);
+
+    //Otra forma de escrbir el codigo antetior es cocatenando:
+
+    let ul3 = "<ul>";
+      ul3 += "<li>primavera</li>";
+      ul3 += "<li>verano</li>";
+      ul3 += "<li>otoño</li>";
+      ul3 += "</ul>";
+
+    console.log(ul3);
+    
+    //--------------------------------------------------------------------------------------------------------------------------
+
+   //------------------------------------------------Termina Comentario*/
+
+    
+   
+   //----------------------------------------------------Tema 7 Numeros----------------------------------------------------------
+
+   //Definir numeros como dato primitivo Ejemplo:
+
+   let a = 2;
+   let b = new Number(3);
+   let c = 8.19;
+
+   console.log(a,b);
+   console.log(b);
+   console.log(c.toFixed(10));
+
+    </script>
+
+    
+   
+    
+  </body>
+</html>
