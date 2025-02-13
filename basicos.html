@@ -12,6 +12,7 @@
     <p id="demo"></p>
 
     <script>
+    //-----------------------------Tema 3 Variable var VS let-----------------------
       /* ------------------------------Comment-------------------------------------
       var name = "placido";
             let nombre = "Placido Domingues";
@@ -40,9 +41,9 @@
             
             console.log("Variable música antes del bloque: ",musica2);
             -------------------------End Comment----------------------------------*/ 
-      
+     //-----------------------------------FIN DE TEMA 3----------------------------------------- 
          
-              
+    //-----------------------------Tema 4 Constantes---------------------------------        
       /*------------------------------Comment-------------------------------
       let a;
       const PI = 3.1416;
@@ -75,7 +76,12 @@
 
       document.getElementById("demo").innerHTML = fruits.shift();
 
+    ------------------------------End Comment-------------------------------*/
+    //-------------------------------------FIN DE TEMA 4-------------------------------------------
+
+    
       //-----------------------------Tema 5 Cadenas de texto-----------------
+      /*------------------------------Comment-------------------------------
       // AKA Strings
 
       let nombre = "Emanuel";
@@ -95,7 +101,7 @@
         nombre.toUpperCase(), //Convierte el texto a Mayusculas
         apellido.toUpperCase(),
         loremp.includes("like"), //El metodo include busca el texto que le indiques y regresa un true or false si lo encuentra
-        loremp,
+        loremp, //Impresion de Loremp en consola
         loremp.trim(), //Elimina los espacios al inicio y al final del texto
         loremp.split(" ") // Separa el texto y lo convierte en un array de acuerdo al separador que le indiques
       );
@@ -105,19 +111,26 @@
         return texto.split("").reverse().join();
       }
 
-      console.log(revertir("Puerco"));
+      console.log(revertir("Dinosaurio"));
 
-      -------------------------------------End Comment--------------------------------*/
+
+    
+
+     -------------------------------------End Comment-------------------------------*/
+      //--------------------------------FIN DE TEMA 5----------------------------------
+
+
 
       //Atajos para programar mas facil:
-      //Alt + Z ----> para ver un texto de un parrafo con saltos de linea en vez de una sola linea
+      //Alt + Z ----> para ver un texto de un parrafo con saltos de linea en vez de una sola linea.
       //Shift + Alt + F --------------> Para odenar el codigo
 
       
 
-      /*---------------------------------------------- Inicia comentario
+      
 
-      //-----------------------------------------------------Tema 6 Template String ------------------------------
+      //--------------------------------------Tema 6 Template String ------------------------------
+      /*---------------------------------------------- Comment---------------------------------------
 
       let mi_nombre = "Emanuel";
       let mi_apellido = "Martinez";
@@ -136,9 +149,11 @@
 
       let ul = "<ul><li>primavera</li><li>Verano</li><li>Otoño</li><li>Invierno</li></ul>";
       
+      //El codigo HTML tiene que ir acomodado en una sola linea cuando se usa doble comilla, de lo contrario mostrara error en la consola
+
       console.log(ul);
       
-      //Codigo de forma INDENTADO
+      //Codigo de forma INDENTADO, el cambio es usar comas invertidas
       let ul2 = `
         <ul>
           <li>primavera</li>
@@ -150,7 +165,7 @@
 
         console.log(ul2);
 
-    //Otra forma de escrbir el codigo antetior es cocatenando:
+    //Otra forma de escrbir el codigo antetior es cocatenando los datos:
 
     let ul3 = "<ul>";
       ul3 += "<li>primavera</li>";
@@ -160,23 +175,36 @@
 
     console.log(ul3);
     
-    //--------------------------------------------------------------------------------------------------------------------------
 
-   //------------------------------------------------Termina Comentario*/
+   -------------------------------------End Comment-------------------------------*/
+   //--------------------------------------FIN DE TEMA 6--------------------------------------
 
     
    
    //----------------------------------------------------Tema 7 Numeros----------------------------------------------------------
-
+    //--------------------------------------Comment------------------------------------------
    //Definir numeros como dato primitivo Ejemplo:
-
+        
    let a = 2;
    let b = new Number(3);
    let c = 8.19;
+   let d = "1.2";
 
    console.log(a,b);
    console.log(b);
-   console.log(c.toFixed(10));
+   console.log(c.toFixed(10)); //El metodo toFixed nos ayuda a definir el numero de decimales en nuestro dato
+   console.log(parseInt(c));
+   console.log(parseFloat(c));
+   console.log(typeof c,typeof d);
+   console.log(a + b);
+   console.log(c + parseInt(d));
+   console.log(c + parseFloat(d)); // Para poder sumar una cadena tipo texto y una variale tipo numero es necesario conbertir la cadena con parseInt o parseFloat
+   console.log(c + Number.parseInt(d));
+   console.log(c + Number.parseFloat(d));
+   
+
+    
+   //-----------------------------------------------End Comment--------------------------------------*/
 
     </script>
 
