@@ -182,7 +182,7 @@
     
    
    //----------------------------------------------------Tema 7 Numeros----------------------------------------------------------
-    //--------------------------------------Comment------------------------------------------
+    /*--------------------------------------Comment------------------------------------------
    //Definir numeros como dato primitivo Ejemplo:
         
    let a = 2;
@@ -204,7 +204,134 @@
    
 
     
-   //-----------------------------------------------End Comment--------------------------------------*/
+   -----------------------------------------------End Comment--------------------------------------*/
+   //--------------------------------------FIN DE TEMA 7--------------------------------------
+  
+      //----------------------------------------------------Tema 8 Booleans----------------------------------------------------------
+    /*--------------------------------------Comment------------------------------------------
+   //Definir numeros como dato primitivo Ejemplo:
+        
+   let verdadero = true;
+   let falso = false;
+
+   //Declarados con el constructor:
+   let v = Boolean(true);
+
+  
+   console.log(verdadero, falso, v);
+   console.log(typeof verdadero,typeof falso);
+
+   //Algunas cadenas por defecto tienden a verdadero o falso segun corresponda (TRUTHLY los valores que tienden a verdadero y falso, documentacion)
+   console.log(Boolean(0));
+   console.log(Boolean(-7));
+   console.log(Boolean(""));
+   console.log(Boolean(" "));
+    
+   -----------------------------------------------End Comment--------------------------------------*/
+   //--------------------------------------FIN DE TEMA 8--------------------------------------
+
+  
+    //----------------------------------------------------Tema 9 Booleans----------------------------------------------------------
+    /*--------------------------------------Comment------------------------------------------
+  
+      //Cual es la diferencia entre null y undefined?
+
+    //Undefined es cuando no se le ha asignado una valor a variable
+      let indefinida;
+    console.log(indefinida);
+
+    //Null es cuando se le asigna el valor null a la variable
+      let nulo = null;
+      console.log(nulo);
+    
+
+    //Que significa NaN ?? Not a Number
+    
+      let noEsUnNumero = "hola" * 3.7;
+      console.log(noEsUnNumero);
+    //En la consola nos aparecera Nan, debido a que esta operacion contiene un valor que no es un numero.
+
+    //En que consiste la tecnica lowerCamelCase?
+    
+   -----------------------------------------------End Comment--------------------------------------*/
+   //--------------------------------------FIN DE TEMA 9--------------------------------------
+
+
+
+    //----------------------------------------------------Tema 10 Funciones----------------------------------------------------------
+    //--------------------------------------Comment------------------------------------------
+  /*Que es una funcion en JS?
+    Es un bloque de codigo que se declara una vez y puede ejecutar en cualquier momento, se puede reutilizar, puede recibir parametros, puede devolver valores, puede devolver la ejecucion de otra funcion
+    Las funciones se consideran objetos(ciudadanos de primer orden)
+    
+    QUES ES UNA ARROW FUNCTION?
+    
+    Existen 2 tipos de funciones declaradas y funciones expresadas
+
+    Funciones declaradas: */
+
+      function estoEsUnaFuncion(){
+      console.log("Uno");
+      console.log("Dos");
+      console.log("Tres");
+      }
+
+      //Se tiene que invocar a mi funcion:
+      /*
+      estoEsUnaFuncion();
+      estoEsUnaFuncion();
+      estoEsUnaFuncion(); */
+
+      function funcionQueDevuelveValor(){
+      console.log("Uno");
+      return 19;
+      console.log("Dos");
+      console.log("Tres");
+      return "La funcion a retornado una cadena de texto";
+      }
+
+      //funcionQueDevuelveValor();
+
+      //let funciondValor = funcionQueDevuelveValor();
+      //console.log(funciondValor);
+
+      //Funcion que recibe parametros:
+
+      function Saludar(nombre,edad){
+        console.log(`Hola mi nombre es ${nombre} y tengo ${edad} años`)
+      }
+
+      Saludar("Ramon",50);
+      Saludar();
+      
+
+      function Saludar2(nombre="Raton",edad=12){
+        console.log(`Mi nombre es ${nombre} y mi edad es ${edad}`);
+      }
+
+      Saludar2();
+
+      //Funciones declaradas vs funciones expresadas
+      funcionDeclarada();
+
+      function funcionDeclarada(){
+        console.log("Esta es una funcion declarada, puede invocarse en cualquier parte del codigo, incluso antes de que la funcion sea declarada")
+      }
+
+      funcionDeclarada();
+
+      //  funcionExpresada();
+
+      //Funcion anonima o expresada
+      const funcionExpresada = function(){
+        console.log("Esta es una funcion expresada,es decir una funcion que se le ha asignado cmo valor a una variable, si invocamos esta funcion antes de su definicion JS nos dira:'Cannot access 'funcionExpresada' before initialization'")
+      }
+
+      funcionExpresada();
+
+    
+   //-----------------------------------------------End Comment------ --------------------------------*/
+   //--------------------------------------FIN DE TEMA 10--------------------------------------
 
     </script>
 
