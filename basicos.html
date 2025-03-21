@@ -335,9 +335,45 @@
 
     //----------------------------------------------------Tema 11 Arrays----------------------------------------------------------
     //--------------------------------------Comment------------------------------------------
-  
-    console.log("Esto es segunda prueba");
     
+    const a = [];
+    const b = [1,true,"Hola",["A","B","C"]]; // Se pueden crear arreglos dentro de los arreglos
+    console.log(a);
+    console.log(b[2]);
+    console.log(b[3][2]); // Para imprimir el elemento que esta dentro de un arreglo, se indica como si fueran coordenadas  
+    
+    //Tambien se pueden declarar arrays de la sig. manera:
+    const c = Array.of("X","Y","Z",1,2,3);
+    console.log(c);
+
+    //Otra forma de declarar un array e inizializarlos con un valor de forma masiva es:
+    const d = Array(100).fill(false);
+    console.log(d);
+
+    //Formas antiguas de declarar un array:
+    const e = new Array();
+    console.log(e);
+
+    const f = new Array(1,2,3,true,false);
+    console.log(f);
+
+  //Metodos con los arrays
+  //Agregar un nuevo elemento a mi array colore
+  const colores = ["rojo","verde","azul"];
+  console.log(colores);
+  colores.push("Blaco"); //Agrega un nuevo elemento al final de mi arreglo
+  console.log(colores);
+
+  colores.pop(); //Elimina el ultimo elemento de mi arreglo
+  console.log(colores);
+
+  //Metodo ForEach, repite una funcion, es muy util para escribir listas
+  colores.forEach(function(color,indice){
+    console.log(`<li id=${indice}>${color}</li>`);
+  });
+
+
+
     
    //-----------------------------------------------End Comment--------------------------------------*/
    //--------------------------------------FIN DE TEMA 11--------------------------------------
