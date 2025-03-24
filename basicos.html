@@ -381,10 +381,56 @@
   //----------------------------------------------------Tema 12 Objetos----------------------------------------------------------
   //--------------------------------------Comment------------------------------------------
   
+  //A los valores de un objeto se les llama propiedades o atributos, y a las funciones de un objeto se les llama metodos
+
+  //Es recomendable declarar los objetos con const, debido a que se esta accediendo a la referencia:
  
+  const b = {};
+  console.log(b);    
   
+  //Declarar el objeto con el prototipo
+  const c = new Object();
+  console.log(c);
 
 
+  const Emanuel = {
+    nombre: "Emanuel",
+    apellido: "Martinez",
+    edad: 28,
+    pasatiempos: ["Correr","Comer","Trabajar"],
+    soltero: false,
+    contacto: {
+      email: "ajamais.ange@gmail.com",
+      instagram: "@emmn_mtz",
+      movil: "44218945876"
+    },
+    saludar: function(){
+      console.log(`Hola :)`)
+    },
+    decirMiNombre: function(){
+      console.log(`Hola me llamo ${this.nombre} ${this.apellido} y tengo ${this.edad} años. Y me puedes seguir como ${this.contacto.instagram} en Instagram`)
+    }
+  }
+
+  console.log(Emanuel);
+  console.log(Emanuel["nombre"]); //Se puede mandar a llamar el atributo entre corchetes
+  console.log(Emanuel.apellido); // O se puede mandar a llamar solo con un punto
+
+  console.log(Emanuel.soltero);
+  console.log(Emanuel.pasatiempos[1]); // Para mandar a llamar el atributo de un array dentro de un objeto
+
+  console.log(Emanuel.contacto.instagram); // Para mandar a llamar el atributo de un objeto dentro de un objeto
+
+  Emanuel.saludar();
+  Emanuel.decirMiNombre();
+
+
+  //Algunos metodos importantes
+
+  console.log(Object.keys(Emanuel)); // Nos trae todas las llaves que tenemos, los nombres de los atributos
+  console.log(Object.values(Emanuel)); // Nos trae el valor de los atributos
+  console.log(Emanuel.hasOwnProperty("nombre")); //Valida si existe el nombre del atributo que le proporcionamos
+  console.log(Emanuel.hasOwnProperty("nacimiento")); 
     
    //-----------------------------------------------End Comment--------------------------------------*/
    //--------------------------------------FIN DE TEMA 12--------------------------------------
