@@ -437,7 +437,77 @@
 
   //----------------------------------------------------Tema 13 Tipos de operadores----------------------------------------------------------
   //--------------------------------------Comment------------------------------------------
-      console.log("Hola Mundoi");
+    //OPERADORES ARTIMETICOS + - * / % () 
+   
+    let a = 5 + 5 - 10 * 3;
+    
+    //Que es el modulo??
+    //Es el residuo que queda de divir un numero entre otro, oomo decir¿Cuanto sobra despues de hacer la division entera?
+    //Ejemplo
+    let modulo = 5 % 2;
+    
+    //console.log(a);
+    //console.log(modulo);
+
+    //OPERADORES RELACIONALES: >, <, >=, <=, ==, ===, !=, !==, ? :
+
+    //console.log(8 > 9); //FALSE
+    //console.log(8 < 9); //TRUE
+    //console.log(8 >= 9); //FALSE
+    //console.log(9 >= 8); //TRUE
+    //console.log(7 < 7); //FALSE
+    //console.log(7 <= 7); //TRUE
+
+    // = 1 igual es asignacion
+    // == 2 iguales es comparacion de valores, el problema con esta comparacion es que solo se comparan los valores y su tendencia
+    
+    console.log(7 == 7); //TRUE
+    console.log("7" == 7); //TRUE
+    console.log(0 == false); //TRUE
+
+    // === Lo recomendable es usar esta comparacion, ya que compara el tipo de dato y el valor 
+
+    console.log(7 === 7); //TRUE
+    console.log("7" === 7); //TRUE
+    console.log(0 === false); //TRUE
+
+    //OPERADORES DE INCREMENTO O DECREMENTO
+    let i = 2;
+    //i = i + 2;
+    //i *=3; //Esta es otra sintaxis para hacer operaciones
+    
+    //OPERADOR UNARIO
+    i++; //Suma una unidad 2+1 LO RECOMENDABLE ES USARLOS DE ESTA MANERA
+    i--; //Resta una unidad 3-1 LO RECOMENDABLE ES USARLOS DE ESTA MANERA
+    ++i; //Suma una unidad 2+1
+    --i; //Resta una unidad 3-1
+
+    //Resultado 2
+
+    console.log(i);
+
+    //Cuidado el orden de los operadores de incremento o decremento, depende tambien del orden, por ejemplo
+    let r = 2;
+    console.log(r++); //Lo primero que hara la consola sera imprimir el valor de r que es 2 y despues sumar la unidad(pero este resultado que es 3 no aparera)
+    console.log(++r); //Por lo contrario aqui lo primero que hace es sumar la unidad y posteriormente imprimir el resultado en este caso 3+1=4
+      
+
+    //OPERADORES LOGICOS
+    // ! - Not
+    // || - Or
+    // && - And 
+
+
+
+
+    //OPERADOR TERNARIO
+    //El operador ternario es básicamente una versión compacta de una estructura if-else. Su sintaxis es:
+    //condición ? expresión_si_true : expresión_si_false    EJEMPLO:
+    let edad = 20;
+    let mensaje = edad >= 18 ? "Eres mayor de edad" : "Eres menor de edad";
+    console.log(mensaje); // Eres mayor de edad
+
+    
 
    //-----------------------------------------------End Comment--------------------------------------*/
    //--------------------------------------FIN DE TEMA 13--------------------------------------
