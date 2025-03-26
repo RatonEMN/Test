@@ -492,15 +492,18 @@
     console.log(++r); //Por lo contrario aqui lo primero que hace es sumar la unidad y posteriormente imprimir el resultado en este caso 3+1=4
       
 
-    //OPERADORES LOGICOS
-    // ! - Not
-    // || - Or
-    // && - And 
+    console.log("---------------Operadores Logicos-----------------")//OPERADORES LOGICOS
+    // ! - Not: Niega lo que es verdadero lo vuelve falso y viceversa
+    console.log(!true); //Con el operador " ! " nos devulve el booleano contrario
+    console.log(!false); //Con el operador " ! " nos devulve el booleano contrario
+    
+    // || - Or: Cuando tengas 2 o mas condiciones, con que una se cumpla, es decir sea verdadera, el OR nos devolvera true
+    console.log((9===9)||("9"===9)); //En este caso sola una de la opcion es true y por eso nos devuelve un true
+    
+    // && - And: Cuando tengo 2 o mas condiciones todas tienen que cumplirse(ser true), para que AND nos devuelva un (true)
+    console.log((9===9)&&("9"===9)); //Esto tiende a false, puesto que uno de los datos no es del mismo tipo de dato que es el "9" 
 
-
-
-
-    //OPERADOR TERNARIO
+    console.log("---------------Operadores Ternario-----------------")//OPERADOR TERNARIO 
     //El operador ternario es básicamente una versión compacta de una estructura if-else. Su sintaxis es:
     //condición ? expresión_si_true : expresión_si_false    EJEMPLO:
     let edad = 20;
