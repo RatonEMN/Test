@@ -436,7 +436,7 @@
    //--------------------------------------FIN DE TEMA 12--------------------------------------
 
   //----------------------------------------------------Tema 13 Tipos de operadores----------------------------------------------------------
-  //--------------------------------------Comment------------------------------------------
+  /*--------------------------------------Comment------------------------------------------
     //OPERADORES ARTIMETICOS + - * / % () 
    
     let a = 5 + 5 - 10 * 3;
@@ -512,9 +512,75 @@
 
     
 
-   //-----------------------------------------------End Comment--------------------------------------*/
+   -----------------------------------------------End Comment--------------------------------------*/
    //--------------------------------------FIN DE TEMA 13--------------------------------------
+  
 
+    //----------------------------------------------------Tema 14 Condicionales----------------------------------------------------------
+  //--------------------------------------Comment------------------------------------------
+  //Estructura de control o condicionales - Controla el flujo de nuestra programacion a diferencia de las estructuras secuenciales, las cuales se ejecutan una linea despues de la otra   
+  // if - else 
+  let edad = 17;
+
+  if(edad > 17){
+    console.log("Eres mayor de edad");
+  }else{
+    console.log("Eres menor de edad");
+  }
+   
+  if(edad >= 18){
+    console.log("Eres mayor de edad");
+  }else{
+    console.log("Eres menor de edad");
+  }
+  //El orden puede cambiar se puede ordenar de diferente forma usando diferentes operadores:
+
+  if(edad < 18){
+    console.log("Eres menor de edad");
+  }else{
+    console.log("Eres mayor de edad");
+  }
+   
+  if(edad <= 17){
+    console.log("Eres menor de edad");
+  }else{
+    console.log("Eres mayor de edad");
+  }
+
+  //if - else if -else
+  //Ejemplo de if else con un caso practico de un saludo en el transcurso del dia
+  //Dejame dormir de 0hrs a 5 hrs
+  //Buenos dias de 6hrs a 11 hrs
+  //Buenas tardes de 12hrs a 18 hrs
+  //Buenas noches de 19 hrs a 23hrs
+  
+  let hora = 9;
+
+  //Condicional utilizando el >=
+  if(hora >= 0 && hora <= 5){
+    console.log("Dejame dormir pegro");
+  }else if(hora >= 6 && hora <= 11){
+    console.log("Buenos dias!!! Que tienen de buenos??");
+  }else if(hora >= 12 && hora <= 18){
+    console.log("Buenas tardes pegro!!");
+  }else{
+    console.log("Buenas noches!!");
+  }
+
+  //Se puede tambien usando solamente los mayor que y menor que 
+  if(hora < 6){
+    console.log("Dejame dormir pegro");
+  }else if(hora > 5 && hora < 12){
+    console.log("Buenos dias!!! Que tienen de buenos??");
+  }else if(hora > 11 && hora < 19){
+    console.log("Buenas tardes pegro!!");
+  }else{
+    console.log("Buenas noches!!");
+  }
+
+
+   //-----------------------------------------------End Comment--------------------------------------*/
+   //--------------------------------------FIN DE TEMA 14--------------------------------------
     </script>
 
     
