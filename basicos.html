@@ -517,10 +517,10 @@
   
 
     //----------------------------------------------------Tema 14 Condicionales----------------------------------------------------------
-  //--------------------------------------Comment------------------------------------------
+  /*--------------------------------------Comment------------------------------------------
   //Estructura de control o condicionales - Controla el flujo de nuestra programacion a diferencia de las estructuras secuenciales, las cuales se ejecutan una linea despues de la otra   
   // if - else 
-  let edad = 17;
+  let edad = 23;
 
   if(edad > 17){
     console.log("Eres mayor de edad");
@@ -547,7 +547,7 @@
     console.log("Eres mayor de edad");
   }
 
-  //if - else if -else
+  //IF ELSE - IF ELSE
   //Ejemplo de if else con un caso practico de un saludo en el transcurso del dia
   //Dejame dormir de 0hrs a 5 hrs
   //Buenos dias de 6hrs a 11 hrs
@@ -578,9 +578,70 @@
     console.log("Buenas noches!!");
   }
 
+  //OPERADOR TERNARIO, Sintaxis: (condicion) ? verdadero : falsa
+  //Ejemplos con el ejercicio de si eres mayor o menor de edad:
+  console.log("----------------Operador ternario-------------");
+  let eresMayor = (edad >= 18 ) //Condicion
+  ? "Eres mayor de edad" //Verdadero 
+  : "Eres menor de edad"; //Falso
+  console.log(eresMayor);
+
+
+  //SWITCH & CASE,  Ejemplo de siwth & case, asignandole un numero a cada dia de la semana:
+  //Domingo: 0, Lunes: 1, Martes: 2, Miercoles: 3, Jueves: 4, Viernes: 5, Sabado: 6
+
+  let day = 5;
+
+  switch(day){
+    case 0:
+    console.log("Domingo");
+    break;
+    case 1:
+    console.log("Lunes");
+    break;
+    case 2:
+    console.log("Martes");
+    break;
+    case 3:
+    console.log("Miercoles");
+    break;  
+    case 4:
+    console.log("Jueves");
+    break;
+    case 5:
+    console.log("Viernes");
+    break;
+    case 6:
+    console.log("Sabado");
+    break;
+    default:
+    console.log("El dia no existe");
+    break;
+  }
+
+
+
+   -----------------------------------------------End Comment--------------------------------------*/
+   //--------------------------------------FIN DE TEMA 14--------------------------------------
+
+
+      //----------------------------------------------------Tema 15 Ciclos(Loops)----------------------------------------------------------
+  //--------------------------------------Comment------------------------------------------
+  
+  let contador = 0;
+
+  while (contador < 10){
+    console.log(contador);
+    contador ++;
+  }
+  
+
 
    //-----------------------------------------------End Comment--------------------------------------*/
-   //--------------------------------------FIN DE TEMA 14--------------------------------------
+   //--------------------------------------FIN DE TEMA 15--------------------------------------
+
+
+
     </script>
 
     
