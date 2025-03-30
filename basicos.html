@@ -629,20 +629,74 @@
   //--------------------------------------Comment------------------------------------------
   
   let contador = 0;
-
-/*   while (contador < 10){
-    console.log(contador);
+  
+  //LOOP WHILE
+  while (contador < 10){
+    console.log("while "+contador);
     contador ++; // Esto solo suma de 1 en 1 hasta llegar a 10
     //Si quisiera sumar de 2 en 2 la sintaxis seria: contador += 2; o tambien podria ser contador = contador + 2;
   }
-    */
 
-   
+  
+  //LOOP DO Y WHILE
   do{
     console.log("do while " + contador);
     contador++;
   }while(contador < 10);
+  //La diferencia entre el while y el (do-while) es que while primero tiene la codicion, si no se cumple no se ejecuta, y en do while primero tiene la accion y despues la condicion lo cual significa que por lo menos que ejecutara una vez el codigo
+  //Este es un ejemmplo muy claro primero que ejecuto el loop de while y se imprimio while del 0 al 9, y cuando llega al (do-while) se ejecuta una vez mas y ahora contador vale 10, como ya no cumple la condicion ya no se vuelve a ejecutar.
 
+  
+
+  //FOR
+  //Estructura de for:
+  //Iniciacilacion de la variable que controlara el bucle (i = 0)
+  //Condcion (i < 10)
+  //Incremento o decremento (i++)
+  //Sentencia a ejecutar, Lo que se encuentre dentro de las llaves {}
+
+  for (let i = 0; i < 10; i++) {
+    console.log("for" +i);    
+  }
+
+
+  //Otro ejemplo
+  let numeros = [10,20,30,40,50,60,70,80,90];
+
+  for(let e = 0; e < numeros.length; e++ ){
+    console.log("No: " + (e+1) + " Arreglo "+ numeros[e]);
+  }
+
+  
+  //FOR IN
+  //Se utiliza principalmente para recorrer las propiedades de un ojeto
+  //Vamos a crear un objeto
+  
+  const emanuel = {
+    nombre: "Emanuel",
+    apellido: "apelldos",
+    edad: 28
+  }
+
+  for(const propiedad in emanuel){
+    console.log(`Key:${propiedad},Values:${emanuel[propiedad]}`);
+  }
+
+  //FOR OF
+  //Esto nos sirve mas para recorrer arreglos, Ejemplo: vamos a recorrer el arreglo de numeros anterior
+  for(const elemento of numeros){
+    console.log(elemento);
+  }
+
+  //Pero tambien nos sirve para recorrer cadenas de texto, Ejemplo:
+  
+  let cadena = "Hola Mundo";
+
+  for(const caracter of cadena){
+    console.log(caracter);
+  }
+   
+  //Los for nos ayudan a recorrer los objetos de JS que sean iterables, Que es iterable? que se pueda divir en pequeños elementos
 
 
    //-----------------------------------------------End Comment--------------------------------------*/
