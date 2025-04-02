@@ -626,7 +626,7 @@
 
 
       //----------------------------------------------------Tema 15 Ciclos(Loops)----------------------------------------------------------
-  //--------------------------------------Comment------------------------------------------
+  /*--------------------------------------Comment------------------------------------------
   
   let contador = 0;
   
@@ -699,8 +699,61 @@
   //Los for nos ayudan a recorrer los objetos de JS que sean iterables, Que es iterable? que se pueda divir en pequeños elementos
 
 
-   //-----------------------------------------------End Comment--------------------------------------*/
+   -----------------------------------------------End Comment--------------------------------------*/
    //--------------------------------------FIN DE TEMA 15--------------------------------------
+
+
+
+         //----------------------------------------------------Tema 16 Manejo de errores----------------------------------------------------------
+  //--------------------------------------Comment------------------------------------------
+  
+  //TRY CATCH, Se utiliza para obtener los errores que podemos llegar a tener en nuestro codigo:
+  //TRY: Se agrega el codigo a evaluar
+  //CATCH: Captura cualquier error surigido en el TRY
+  //FINALLY: Se ejecuta siempre en un bloque try-catch, Aunque comunmente no se utiliza.
+      //Ejemplo:
+      try {
+        console.log("Se agrega el codigo a evaluar");
+        noExiste;
+        console.log("Segundo mensaje del try"); //Este mensaje ya no se imprimio
+      } catch (error) {
+        console.log("Captura cualquier error surigido en el TRY");
+        console.log(error);
+      }finally{
+        console.log("Finally Se ejecuta siempre en un bloque try-catch, Aunque comunmente no se utiliza")
+      }
+  //Este es un ejemplo de como funciona try-catch, se agrego la variable noExiste, la cual no se encuentra definida, podemos comprobarlo sacando esa variable fuera del try-catch y nos marcara los errores en rojo en la consola
+
+
+  //------------------------------------------------------------------------
+  
+  //Este es un ejemplo en el cual estamos evaluando si la variable numero es de tipo numero, si no lo es nos manda el mensaje de error que nosotros indicamos
+      try {
+        let numero = "y";
+        if(isNaN(numero)){
+          throw new Error("El caracter no es valido(debe ser numero)");
+        }
+        console.log(numero * numero);
+      } catch (error) {
+          console.log(`Se produjo el siguiente Error: ${error}`);
+      }
+  
+  //Aqui ocupamos por primera vez el throw new Error, la cual se utiliza especificamente para lanzar exepciones(errores), cuando lanzamos throw new Error estamos lanzando una instancia de la clase Error.
+
+  //Cual es la diferencia entre instancia y objeto? Bueno la instancia siempre es creada a partir de una clase(plantilla) a diferencia del objeto que no necesariamente viene de una clase
+
+  //Un ejemplo para poder entender es: Imagina que throw es como lanzar una pelota (error) hacia alguien (catch) que la recibe y hace algo con ella:
+      try {
+        throw new Error("Error inesperado");
+      } catch (error) {
+        console.log("Se atrapó el error:", error.message);
+      }
+  //Sin catch, la pelota (error) simplemente cae al suelo y detiene el programa.
+
+
+
+   //-----------------------------------------------End Comment--------------------------------------*/
+   //--------------------------------------FIN DE TEMA 16--------------------------------------
 
 
 
