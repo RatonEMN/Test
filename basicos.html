@@ -758,7 +758,7 @@
 
 
    //----------------------------------------------------Tema 17 Break & Continue----------------------------------------------------------
-  //--------------------------------------Comment------------------------------------------
+  /*--------------------------------------Comment------------------------------------------
     //Break: Nos permitira salirnos de una condicional, por ejemplo en un bucle, Ejemplo:
 
     let numeros = [1,2,3,4,5,6,7,8,9,0];
@@ -782,8 +782,39 @@
 
     //La diferencia con continue es que no imprimio el numero de la posicion[5] que es el 6, pero continuo imprimiendo el resto de numeros del array
  
-   //-----------------------------------------------End Comment--------------------------------------*/
+   -----------------------------------------------End Comment--------------------------------------*/
    //--------------------------------------FIN DE TEMA 17--------------------------------------
+
+     //----------------------------------------------------Tema 18 Destructuracion----------------------------------------------------------
+  //--------------------------------------Comment------------------------------------------
+  //La destructuracion me ayuda a ahorar tiempo, escribiendo menos codigo y haciendo de manera visual mas entendible mi codigo.
+
+  let numeros = [1,2,3];
+
+  //Sin destruturacion, acceder a la variable de mi arreglo uno por uno:
+
+  let uno = numeros[0],
+      dos = numeros[1],
+      tres = numeros[2];
+  
+  console.log(uno,dos,tres);//1,2,3
+
+  //Con destruturacion
+  const[one, two, three] = numeros; //Aqui lo que importa es el orden en el cual yo asigne los nombres[one, two, three] = nombres[posicion(0,1,2)] en el arreglo, ya que asi los esta asignando por posicion.
+  console.log(one, two, three);//1,2,3
+
+  let persona = {
+    nombre: "Emanuel",
+    apellido: "Martinez",
+    edad: 28
+  }
+
+  let {nombre, apellido, edad} = persona; //Entre los corchetes se indica el nombre de las variables que queremos traer {nombre, apellido, edad} con el igual indicamos el nombre del objeto al cual queremos acceder (persona)).
+  console.log(nombre, apellido, edad);
+  //En un objeto es un poco mas facil de entender, pues se esta accediendo al nombre de las propiedades.
+
+   //-----------------------------------------------End Comment--------------------------------------*/
+   //--------------------------------------FIN DE TEMA 18--------------------------------------
 
 
 
