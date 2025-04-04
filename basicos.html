@@ -786,7 +786,7 @@
    //--------------------------------------FIN DE TEMA 17--------------------------------------
 
      //----------------------------------------------------Tema 18 Destructuracion----------------------------------------------------------
-  //--------------------------------------Comment------------------------------------------
+  /*--------------------------------------Comment------------------------------------------
   //La destructuracion me ayuda a ahorar tiempo, escribiendo menos codigo y haciendo de manera visual mas entendible mi codigo.
 
   let numeros = [1,2,3];
@@ -813,10 +813,51 @@
   console.log(nombre, apellido, edad);
   //En un objeto es un poco mas facil de entender, pues se esta accediendo al nombre de las propiedades.
 
-   //-----------------------------------------------End Comment--------------------------------------*/
+   -----------------------------------------------End Comment--------------------------------------*/
    //--------------------------------------FIN DE TEMA 18--------------------------------------
 
+       //----------------------------------------------------Tema 19 Objetos Literales----------------------------------------------------------
+  /*--------------------------------------Comment------------------------------------------
+  //Los objetos literales es una forma mas sencilla de escribir la sintaxis, digamos que es una sintaxis mas compacta, este es un ejemplo:
 
+  //Declaramaos nuestras variables que queremos usar en nuestros objetos:
+      let nombre = "Tejoncita", edad = 7; 
+
+  //Ejemplo normal de la sintaxis en un objeto usando las variables anteriores:
+      const perro = {
+        nombre: nombre,
+        edad: edad,
+        ladrar: function(){
+          console.log("guauuuu guauuuu");
+        }
+      }
+
+      console.log(perro); // {nombre: 'Tejoncita', edad: 7, ladrar: ƒ}
+      perro.ladrar();//guauuuu guauuuu
+
+  //Ejemplo de objetos literales, usando una sintaxis mas compacta:
+      const dog = {
+        nombre, // no es necesario hacer la referencia al nombre de nuesta variable nombre, solo es necesario que las 2 tengan el mismo nombre
+        edad,
+        raza: "Callejero", //Podemos agregar mas variables a nuestro objeto de esta manera
+        ladrar(){ //Y en las funciones no es necesario poner la palabra reservada function, solo el nombre de la funcion y los parentesis
+          console.log("guauuu guauuu guauuuu");
+        }
+      }
+
+      console.log(dog);//{nombre: 'Tejoncita', edad: 7, raza: 'Callejero', ladrar: ƒ}
+      dog.ladrar();//guauuu guauuu guauuuu
+
+   -----------------------------------------------End Comment--------------------------------------*/
+   //--------------------------------------FIN DE TEMA 19--------------------------------------
+
+  //----------------------------------------------------Tema 20 ----------------------------------------------------------
+  //--------------------------------------Comment------------------------------------------
+
+
+ 
+ //-----------------------------------------------End Comment--------------------------------------*/
+ //--------------------------------------FIN DE TEMA 20--------------------------------------
 
     </script>
 
