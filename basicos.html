@@ -852,7 +852,8 @@
    //--------------------------------------FIN DE TEMA 19--------------------------------------
 
   //----------------------------------------------------Tema 20 Parametros Rest & Operador Spread ----------------------------------------------------------
-  //--------------------------------------Comment------------------------------------------
+  /*--------------------------------------Comment------------------------------------------
+      //Parametro Rest
 
   function sumar(a,b,...c){
     let resultado = a + b;
@@ -863,11 +864,114 @@
     return resultado;
   }
 
-  console.log(sumar(1,5,4));
+  console.log(sumar(1,2,3));
+  console.log(sumar(1,2,3,4));
+  console.log(sumar(1,2,3,4,5));
 
- 
- //-----------------------------------------------End Comment--------------------------------------*/
+    //Operator Spreed
+  const arr1 = [1,2,3,4,5],
+   arr2 = [6,7,8,9,0];
+
+  console.log(arr1,arr2); //Esto me devuelve los 2 arreglos de 5 pocisiones cada uno
+  
+  //Que pasaria si quisiera juntar los 2 arreglos?
+  const arr3 = [arr1,arr2]; //Podriamos intentar de esta manera, pero el problema es que no los une:
+  console.log(arr3); //Cuando imprimimos en la consola nos siguen apareciendo los 2 arreglos de 5 posiciones
+
+  //La solucion correcta es la siguiente:
+  const arr3Spreed = [...arr1, ...arr2]; // Nos devulve un solo arreglo juntando los arreglos arr1 y arr2
+  console.log(arr3Spreed); // Resultado: [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
+
+ -----------------------------------------------End Comment--------------------------------------*/
  //--------------------------------------FIN DE TEMA 20--------------------------------------
+
+
+   //----------------------------------------------------Tema 21 Arrow Functions ----------------------------------------------------------
+  //--------------------------------------Comment------------------------------------------
+  
+  //Las arrow functions son maneras diferentes de declarar una funcion incluso omitiendo la palabra reservada function por una arrow function => , Por ejemplo cuando tenemos una funcion expresada quedaria como:
+
+  const saludar = function(){
+    console.log(`Hola`);
+  }
+  saludar();
+
+  //Con una arrow function queria de la sig. manera:
+  const saludarConArrowFunction = () => {
+    console.log(`Hola arrow`)
+  }
+  saludarConArrowFunction();
+
+  //Pero que para si queremos recibir parametros?
+  //Si solo es un parametro, lo podemos escribir asi:
+
+  const saludarArrowParametro = nombre => console.log(`Hola mi nombre es ${nombre}`); //Notese que en este ejemplo se eleminaron las llaves puesto que el codigo se puede agrupar en una sola linea
+  //Notese que de igual manera a la variable nombre se le quitaron los parentesis, cuando es una sola variable se puede escribir asi.
+
+  saludarArrowParametro("Emanuel");
+
+  //Que pasa si tengo 2 o mas parametros?
+
+  //En una sintaxis normal quedaria de la sig. manera:
+  const sumar = function(a,b) {
+    return a + b;
+  }
+  console.log(sumar(10,5));
+
+  //Pero con arrow function quedaria de la sig manera:
+  const sumarArrow = (a,b) => a + b; //Notese que aqui si tuvimos que poner nuestras variables entre parentesis y notese que tampoco tuvimo que escribir la palabra return
+  //De igual manera se omitieron las llaves en la funcion, pero esto es por que todo el codigo se puede agrupar en una sola linea
+  console.log(sumar(9,9));
+
+
+  //Ejemplo de arrow function con varias lineas:
+
+  const funcionDeVariasLineas = () => {
+    console.log("Uno");
+    console.log("Dos");
+    console.log("Tres");
+  }
+
+  funcionDeVariasLineas();
+
+  //Es muy util usarlo en las iteraciones:
+  const numeros = [1,2,3,4,5,6];
+
+  numeros.forEach((el,index) => console.log(`${el} esta en la posicion ${index}`));
+  //Llamamos al metodo forEach, y despues declaramos nuestra funcion con el arrow, notese que en este ejemplo, no se usaron las llaves por que se puede agrupar en un solo codigo.
+  
+  //No se recomienda usar las arrow functions en los objetos, por que con la palabra reservada this, no lo reconoce como su contexto. ejemplo
+
+  function Perro() { //Las funciones pertenecen al contexto global
+    console.log(this); //En este contexto this no reconoce el contexto de la funcion, reconoce el objeto window, osea la ventana del navegador
+  }
+  Perro();
+
+  //Pero que pasa si mandamos a llamar this, desde un objeto:
+
+  //Cuando la ponemos con arrow function, no reconoce el objeto en el cual esta si no que reconoce el contexto global, es decir el objeto window
+  //Ejemplo:
+
+  const gatito = {
+    nombre: "Minino",
+    maullar: () =>{
+      console.log(this);
+    }
+  }
+  gatito.maullar(); // Me trae el objeto window
+
+  //Lo correcto es escribirlos de la sig. manera:
+  const gato = {
+    nombre: "Michito",
+    maullar(){ // maullar: function(){   ---Tambien se puede escribir asi 
+      console.log(this);
+    }
+  }
+  gato.maullar(); //Cuando mandamos a llamar esta funcion, podemos ver que reconoce a this como el objeto en el cual esta 
+  
+
+ //-----------------------------------------------End Comment--------------------------------------*/
+ //--------------------------------------FIN DE TEMA 21--------------------------------------
 
     </script>
 
