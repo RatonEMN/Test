@@ -13,7 +13,8 @@
 
     <script>
   //1) Programa una función que cuente el número de caracteres de una cadena de texto, pe. miFuncion("Hola Mundo") devolverá 10.
-        let cadenaTexto = "miCadena";
+      //Asi lo hice yo:
+    let cadenaTexto = "miCadena";
 
         function contarCadena(texto){
             console.log(texto.length);
@@ -21,7 +22,26 @@
 
         contarCadena("Hola Mundo");
 
-        
+    //Asi lo hizo Jon Mircha:
+      //Con una funcion declarada:
+      function contarCaracteresF (cadena =""){
+        if(!cadena){
+          console.warn(`No ingresaste ninguna ${cadena}`);
+        }else{
+          console.info(`La cadena "${cadena}" tiene ${cadena.length}`);
+        }
+      }
+    
+      contarCaracteresF("Hola Mundo");
+
+      //Con operador ternario:
+    const contarCaracteres = (cadena = "") =>
+    (!cadena)
+        ?console.warn("No ingresaste ninguna cadena")
+        :console.info(`La cadena ${cadena} tiene ${cadena.length} caracteres`);
+    
+    contarCaracteres();
+    contarCaracteres("Hola Mundo");
 
   //2) Programa una función que te devuelva el texto recortado según el número de caracteres indicados, pe. miFuncion("Hola Mundo", 4) devolverá "Hola".
         
