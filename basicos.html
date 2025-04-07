@@ -887,7 +887,7 @@
 
 
    //----------------------------------------------------Tema 21 Arrow Functions ----------------------------------------------------------
-  //--------------------------------------Comment------------------------------------------
+  /*--------------------------------------Comment------------------------------------------
   
   //Las arrow functions son maneras diferentes de declarar una funcion incluso omitiendo la palabra reservada function por una arrow function => , Por ejemplo cuando tenemos una funcion expresada quedaria como:
 
@@ -970,8 +970,80 @@
   gato.maullar(); //Cuando mandamos a llamar esta funcion, podemos ver que reconoce a this como el objeto en el cual esta 
   
 
- //-----------------------------------------------End Comment--------------------------------------*/
+ -----------------------------------------------End Comment--------------------------------------*/
  //--------------------------------------FIN DE TEMA 21--------------------------------------
+
+  //----------------------------------------------------Tema 22 Prototipos ----------------------------------------------------------
+  //--------------------------------------Comment------------------------------------------
+  //POO - Programacion orientada a objetos
+    //Clases - Es una plantilla para crear instancias(objetos)
+    //Objetos - Es una instancia de una clase(un objeto creado a partir de una clase)
+    //Atributos - Son los valores que le se asignan aun objeto(Caracteristicas o propiedades)
+    //Metodos - Son las acciones que va a realizar nuestro objeto
+  
+    //Ejemplo de un objeto
+
+    const animal = {
+      nombre: "Snoopy",
+      sonar() {
+        console.log("Hago sonidos por que estoy vivo");
+      }
+    }
+
+    const animal2 = {
+      nombre: "Lola Bunny",
+      sonar() {
+        console.log("Hago sonidos por que estoy vivo");
+      }
+    }
+
+    //En la consola se puede ver como los 2 objetos son herencia del object prototype.
+    console.log(animal);
+    console.log(animal2);
+    
+
+    //Pero como puedo crear una clase para poder generar N cantidad de animales?
+
+    //Tiene que ser por medio de una funcion constructor:
+    function Animal (nombre,genero){
+      //Atributos
+      this.nombre = nombre;
+      this.genero = genero;
+      
+      //Metodos - La declaracion de estos metodos dentro de la funcion no es correcto por que se duplica la funcion en todas nuestras instancias y ocupa mas espacio
+      //this.sonar = function(){console.log("Hago sonidos por que estoy vivo"); }
+
+      //this.saludar = function(){console.log(`Hola mi mobre es ${nombre}`); }
+      
+    }
+
+    //Lo correcto es declarar los metodos fuera de la funcion constructora
+
+    Animal.prototype.sonar = function(){
+      console.log("Hago sonidos por que estoy vivo"); 
+    }
+
+    Animal.prototype.saludar = function(){
+      console.log(`Hola mi mobre es ${this.nombre}`); 
+    }
+
+    const snoopy = new Animal("Snoopy","Macho"),
+        lolabunny = new Animal("Lola Bunny","Hembra");
+
+    console.log(snoopy);
+    console.log(lolabunny);
+
+    snoopy.sonar();
+    snoopy.saludar();
+
+    lolabunny.sonar();
+    lolabunny.saludar();
+
+    
+
+  
+ //-----------------------------------------------End Comment--------------------------------------*/
+ //--------------------------------------FIN DE TEMA 22--------------------------------------
 
     </script>
 
